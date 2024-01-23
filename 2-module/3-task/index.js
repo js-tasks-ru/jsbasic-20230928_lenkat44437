@@ -1,7 +1,7 @@
 let calculator = {
   massive: {}, 
   read (a, b) {
-    return this.massive = {a, b}; 
+    this.massive = {a, b}; 
   },
   sum () {
     let sum = 0;
