@@ -1,7 +1,7 @@
 function highlight(table) {
   for (cells of table.getElementsByTagName('tr')) {
     let cellschild = cells.getElementsByTagName('td');
-    if (cellschild[cellschild.length-1].dataset.available === undefined) {
+    if (cellschild[cellschild.length - 1].dataset.available === undefined) {
       cells.setAttribute('hidden', 'true');
     }
     for (cells of table.getElementsByTagName('td')) {
