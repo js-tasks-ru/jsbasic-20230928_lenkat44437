@@ -18,10 +18,10 @@ function initCarousel() {
     } else {
       caruselLeft.style.display = 'none';
     }
-    if (transforms < -1976) {
+    if (transforms < -caruselInnerWidth * 2) {
       caruselRight.style.display = 'none';
     } else {
-      caruselRight.style.display = 'none';
+      caruselRight.style.display = '';
     }
   });
 }
