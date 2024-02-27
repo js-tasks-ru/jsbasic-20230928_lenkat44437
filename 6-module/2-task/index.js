@@ -59,5 +59,5 @@ export default class ProductCard {
     return table;
   }
 
-
+  
 }
