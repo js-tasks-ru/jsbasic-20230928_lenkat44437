@@ -3,7 +3,7 @@ import createElement from '../../assets/lib/create-element.js';
 export default class Carousel {
   constructor(slides) {
     this.slides = slides;
-    this.elem = this.changeCarusel();
+    this.elem = this.render();
   }
 
   render () {
@@ -53,12 +53,8 @@ export default class Carousel {
         button.dispatchEvent(event);
       };
     }
-    return container;
-  }
-      
-  changeCarusel () {
-    let container = this.render();
-    const caruselInnerWidth = document.body.querySelector('.container').offsetWidth;
+
+    const caruselInnerWidth = 500 //document.body.querySelector('.container').offsetWidth;
     let caruselLeft = container.querySelector('.carousel__arrow_left');
     let caruselRight = container.querySelector('.carousel__arrow_right');
     let transforms = 0;
