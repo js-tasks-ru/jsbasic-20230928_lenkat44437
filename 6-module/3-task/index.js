@@ -54,7 +54,6 @@ export default class Carousel {
       };
     }
   
-    const caruselInnerWidth = 500 //document.body.querySelector('.container').offsetWidth;
     let caruselLeft = container.querySelector('.carousel__arrow_left');
     let caruselRight = container.querySelector('.carousel__arrow_right');
     let transforms = 0;
@@ -62,6 +61,7 @@ export default class Carousel {
     caruselLeft.style.display = 'none';
 
     container.addEventListener('click', event => {
+      const caruselInnerWidth = document.querySelector('.carousel__inner').parentNode.offsetWidth;
       if (event.target.closest('div.carousel__arrow.carousel__arrow_right')) {
         transforms -= caruselInnerWidth;
       } else if (event.target.closest('div.carousel__arrow.carousel__arrow_left')) {
