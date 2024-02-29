@@ -68,6 +68,11 @@ export default class RibbonMenu {
       };
     }
 
+    let ribbonItemActiveFirst = ribbonInner.firstElementChild;
+    let ribbonItemActiveLast = ribbonInner.lastElementChild;
+    ribbonItemActiveFirst.classList.add('ribbon__item_active');
+    ribbonItemActiveLast.classList.add('ribbon__item_active');
+
     return ribbonMenu;
   }
 }
